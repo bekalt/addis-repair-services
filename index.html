@@ -9,6 +9,8 @@
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+
+<!-- NAV -->
 <nav class="navbar navbar-expand-lg navbar-dark bg-navy">
   <div class="container">
     <a class="navbar-brand fw-semibold" href="index.html">ADDIS Repair & Services</a>
@@ -17,7 +19,7 @@
     </button>
     <div id="nav" class="collapse navbar-collapse">
       <ul class="navbar-nav ms-auto gap-lg-2">
-        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+        <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
         <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
         <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
         <li class="nav-item"><a class="nav-link" href="safety.html">Safety & Compliance</a></li>
@@ -29,25 +31,31 @@
   </div>
 </nav>
 
-<header class="hero">
-  <div class="container">
-    <div class="row align-items-center g-4">
+<!-- HERO -->
+<header class="hero-media">
+  <video autoplay muted loop playsinline>
+    <source src="videos/services/baggage-delivery.mp4" type="video/mp4">
+  </video>
+  <div class="overlay"></div>
+
+  <div class="container content">
+    <div class="row g-4 align-items-center">
       <div class="col-lg-7">
         <div class="kicker text-white-50 mb-2">Airport-focused services</div>
-        <h1 class="display-5 fw-semibold">Reliable Repair & Support Services for Airport Operations</h1>
+        <h1 class="display-5 fw-semibold">Operational Support Built for Airport Environments</h1>
         <p class="lead mt-3 mb-4">
-          ADDIS Repair & Services supports airports, airlines, and commercial partners with dependable operational services.
-          Our approach is professional, safety-minded, and built for the demands of aviation environments.
+          Professional, safety-minded services for airports, airlines, and commercial partners.
         </p>
         <div class="d-flex flex-wrap gap-2">
           <a class="btn btn-navy" href="quote.html">Request a Quote</a>
           <a class="btn btn-outline-light" href="services.html">View Services</a>
         </div>
       </div>
+
       <div class="col-lg-5">
-        <div class="card-soft p-4">
+        <div class="hero-card p-4">
           <div class="kicker mb-2">Quick overview</div>
-          <h2 class="h5 fw-semibold mb-3">Core Service Areas</h2>
+          <h2 class="h5 fw-semibold mb-3 text-navy">Core Service Areas</h2>
           <ul class="mb-0 small-muted">
             <li class="mb-2">Baggage delivery support</li>
             <li class="mb-2">Baggage handling support</li>
@@ -55,72 +63,94 @@
             <li class="mb-2">Professional cleaning</li>
           </ul>
           <hr class="hr-soft my-3">
-          <div class="small-muted">Need a tailored scope? Submit a quote request and we’ll follow up promptly.</div>
+          <div class="small-muted">Stock footage shown. Replace with real airport media later.</div>
         </div>
       </div>
     </div>
   </div>
 </header>
 
+<!-- BIG VISUAL SERVICES -->
 <section class="section">
   <div class="container">
-    <div class="row g-4 align-items-end">
+    <div class="row g-3 align-items-end mb-3">
       <div class="col-lg-7">
         <div class="kicker mb-2">Services</div>
-        <h2 class="fw-semibold">Built for airport environments</h2>
-        <p class="small-muted mb-0">We focus on clean execution, safety, and consistency—supporting daily operations with dependable service.</p>
+        <h2 class="fw-semibold mb-0">Services at a glance</h2>
+        <div class="small-muted mt-2">Media-forward layout designed to build trust quickly.</div>
       </div>
       <div class="col-lg-5 text-lg-end">
         <a class="btn btn-outline-secondary" href="services.html">Explore all services</a>
       </div>
     </div>
 
-    <div class="row g-4 mt-2">
-      <div class="col-md-6 col-lg-3">
-        <div class="card h-100 p-3">
-          <div class="fw-semibold">Baggage Delivery</div>
-          <div class="small-muted mt-2">Support for reliable delivery workflows and service readiness.</div>
-          <a class="stretched-link" href="services.html#baggage-delivery" aria-label="Baggage Delivery"></a>
+    <div class="row g-3">
+      <div class="col-lg-6">
+        <div class="service-tile">
+          <img class="bg" src="images/services/baggage-delivery-1.jpg" alt="Baggage delivery">
+          <div class="shade"></div>
+          <div class="inner">
+            <h3 class="h4 fw-semibold">Baggage Delivery</h3>
+            <p>Reliable support for delivery workflows.</p>
+            <a href="services.html#baggage-delivery" class="btn btn-outline-light">View service</a>
+          </div>
         </div>
       </div>
-      <div class="col-md-6 col-lg-3">
-        <div class="card h-100 p-3">
-          <div class="fw-semibold">Baggage Handling</div>
-          <div class="small-muted mt-2">Operational support aligned with ramp and terminal demands.</div>
-          <a class="stretched-link" href="services.html#baggage-handling" aria-label="Baggage Handling"></a>
+
+      <div class="col-lg-6">
+        <div class="service-tile">
+          <img class="bg" src="images/services/baggage-handling-1.jpg" alt="Baggage handling">
+          <div class="shade"></div>
+          <div class="inner">
+            <h3 class="h4 fw-semibold">Baggage Handling</h3>
+            <p>Support aligned with ramp and terminal operations.</p>
+            <a href="services.html#baggage-handling" class="btn btn-outline-light">View service</a>
+          </div>
         </div>
       </div>
-      <div class="col-md-6 col-lg-3">
-        <div class="card h-100 p-3">
-          <div class="fw-semibold">Wheelchair Maintenance</div>
-          <div class="small-muted mt-2">Routine checks and servicing to keep mobility equipment ready.</div>
-          <a class="stretched-link" href="services.html#wheelchair-maintenance" aria-label="Wheelchair Maintenance"></a>
+
+      <div class="col-lg-6">
+        <div class="service-tile">
+          <img class="bg" src="images/services/wheelchair-1.jpg" alt="Wheelchair maintenance">
+          <div class="shade"></div>
+          <div class="inner">
+            <h3 class="h4 fw-semibold">Wheelchair Maintenance</h3>
+            <p>Routine servicing to keep equipment ready.</p>
+            <a href="services.html#wheelchair-maintenance" class="btn btn-outline-light">View service</a>
+          </div>
         </div>
       </div>
-      <div class="col-md-6 col-lg-3">
-        <div class="card h-100 p-3">
-          <div class="fw-semibold">Professional Cleaning</div>
-          <div class="small-muted mt-2">Consistent cleaning support for operational and commercial areas.</div>
-          <a class="stretched-link" href="services.html#professional-cleaning" aria-label="Professional Cleaning"></a>
+
+      <div class="col-lg-6">
+        <div class="service-tile">
+          <img class="bg" src="images/services/cleaning-1.jpg" alt="Professional cleaning">
+          <div class="shade"></div>
+          <div class="inner">
+            <h3 class="h4 fw-semibold">Professional Cleaning</h3>
+            <p>Consistent cleaning support for operations.</p>
+            <a href="services.html#professional-cleaning" class="btn btn-outline-light">View service</a>
+          </div>
         </div>
       </div>
     </div>
   </div>
 </section>
 
+<!-- CTA -->
 <section class="section-alt">
   <div class="container">
     <div class="card-soft p-4 p-lg-5 d-flex flex-column flex-lg-row align-items-lg-center justify-content-between gap-3">
       <div>
         <div class="kicker mb-2">Request a quote</div>
         <h2 class="h4 fw-semibold mb-1">Tell us what you need—we’ll respond promptly</h2>
-        <div class="small-muted">No pricing is displayed online. We provide quotes based on your scope and requirements.</div>
+        <div class="small-muted">No pricing is displayed online.</div>
       </div>
       <a class="btn btn-navy" href="quote.html">Request a Quote</a>
     </div>
   </div>
 </section>
 
+<!-- FOOTER -->
 <footer class="footer">
   <div class="container">
     <div class="row g-3 align-items-center">
@@ -134,6 +164,7 @@
     </div>
   </div>
 </footer>
+
 <script>document.getElementById("year").textContent = new Date().getFullYear();</script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
