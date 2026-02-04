@@ -79,7 +79,7 @@ body{
 /* ===== Media-forward homepage ===== */
 .hero-media {
   position: relative;
-  min-height: 78vh;
+  min-height: 62vh;
   display: flex;
   align-items: center;
   color: #fff;
@@ -89,7 +89,7 @@ body{
 .hero-media .overlay {
   position: absolute;
   inset: 0;
-  background: linear-gradient(180deg, rgba(11,31,59,0.88), rgba(11,31,59,0.58));
+  background: linear-gradient(180deg, rgba(11,31,59,0.82), rgba(11,31,59,0.55));
   z-index: 1;
 }
 
@@ -118,7 +118,7 @@ body{
   border-radius: 1rem;
   overflow: hidden;
   border: 1px solid var(--border);
-  min-height: 280px;
+  min-height: 220px;
   background: #111;
   color: #fff;
 }
@@ -130,13 +130,14 @@ body{
   height: 100%;
   object-fit: cover;
   transform: scale(1.02);
-  filter: saturate(1.05);
+  filter: saturate(1.25) contrast(1.08) brightness(0.95)
+
 }
 
 .service-tile .shade {
   position: absolute;
   inset: 0;
-  background: linear-gradient(180deg, rgba(0,0,0,0.15), rgba(0,0,0,0.70));
+  background: linear-gradient(180deg, rgba(2,6,23,0.10), rgba(2,6,23,0.78));
 }
 
 .service-tile .inner {
