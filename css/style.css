@@ -76,3 +76,84 @@ body{
   .hero{ padding: 4.5rem 0; }
   .section, .section-alt{ padding: 3rem 0; }
 }
+/* ===== Media-forward homepage ===== */
+.hero-media {
+  position: relative;
+  min-height: 78vh;
+  display: flex;
+  align-items: center;
+  color: #fff;
+  overflow: hidden;
+}
+
+.hero-media .overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(11,31,59,0.88), rgba(11,31,59,0.58));
+  z-index: 1;
+}
+
+.hero-media .content {
+  position: relative;
+  z-index: 2;
+}
+
+.hero-media video,
+.hero-media .hero-bg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.hero-media .hero-card {
+  background: rgba(255,255,255,0.92);
+  border: 1px solid rgba(229,231,235,0.9);
+  border-radius: 1rem;
+}
+
+.service-tile {
+  position: relative;
+  border-radius: 1rem;
+  overflow: hidden;
+  border: 1px solid var(--border);
+  min-height: 280px;
+  background: #111;
+  color: #fff;
+}
+
+.service-tile .bg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transform: scale(1.02);
+  filter: saturate(1.05);
+}
+
+.service-tile .shade {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(0,0,0,0.15), rgba(0,0,0,0.70));
+}
+
+.service-tile .inner {
+  position: relative;
+  z-index: 2;
+  padding: 1.5rem;
+}
+
+.service-tile:hover .bg {
+  transform: scale(1.06);
+  transition: transform 250ms ease;
+}
+
+.service-tile .btn {
+  border-color: rgba(255,255,255,0.55);
+}
+
+@media (max-width: 576px){
+  .hero-media { min-height: 70vh; }
+}
