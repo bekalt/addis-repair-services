@@ -16,17 +16,20 @@ body{
   border-color: var(--navy);
   color:#fff;
 }
-.btn-navy:hover{ filter: brightness(1.05); color:#fff; }
-.section{ padding: 4rem 0; }
-.section-alt{ background: var(--light); padding: 4rem 0; }
-.card{ border: 1px solid var(--border); border-radius: 1rem; }
-.card-soft{ border: 1px solid var(--border); border-radius: 1rem; background: #fff; }
-.hero{
-  background: linear-gradient(180deg, rgba(11,31,59,0.92), rgba(11,31,59,0.75)),
-              url("images/general/hero.jpg") center/cover no-repeat;
-  color:#fff;
-  padding: 6rem 0;
+/* Navy primary button with subtle off-white border */
+.btn-navy {
+  background-color: #0b2e4f;   /* your navy */
+  border: 2px solid rgba(255,255,255,0.85);  /* off-white border */
+  color: #ffffff;
 }
+
+/* Hover effect */
+.btn-navy:hover {
+  background-color: #09263f;   /* slightly darker navy */
+  border-color: #ffffff;
+  color: #ffffff;
+}
+
 .hero .lead{ color: rgba(255,255,255,0.88); }
 .kicker{
   letter-spacing: .08em;
@@ -182,21 +185,24 @@ form button.btn-navy {
   z-index: 5;
 }
 /* Navbar logo visibility fix */
+/* Navbar logo refined sizing */
 .logo-img {
-  height: 46px;
+  height: 56px;              /* Bigger logo */
   width: auto;
   display: block;
 
   background: #ffffff;
-  padding: 6px 10px;
-  border-radius: 10px;
+  padding: 4px 8px;          /* Smaller padding */
+  border-radius: 8px;
   border: 1px solid rgba(0,0,0,0.12);
 
-  box-shadow: 0 2px 8px rgba(0,0,0,0.18);
+  box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+padding: 3px 6px;
+height: 58px;
 
-  opacity: 1;
-  filter: none;
 }
+
+
 /* Reduce left padding of navbar container */
 .navbar .container {
   padding-left: 12px;   /* default is ~24px */
