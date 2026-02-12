@@ -235,4 +235,20 @@ padding: 3px;
     box-shadow: 0 10px 24px rgba(0,0,0,0.18);
   }
 }
+/* Subtle structured hero text card */
+.hero-text-card {
+  display: inline-block;
+  padding: 14px 20px;
+  border-radius: 14px;
+
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+
+  backdrop-filter: blur(6px);
+}
+
+/* Keep text clean and readable */
+.hero-text-card .lead {
+  color: #ffffff;
+}
 
