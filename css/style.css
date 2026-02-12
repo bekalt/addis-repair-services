@@ -162,22 +162,8 @@ body{
   .hero-media { min-height: 70vh; }
 }
 
-.logo-img {
-  height: 36px;
-  width: auto;
-  object-fit: contain;
-}
-/* Fix: keep Send Message button visible on hover/focus/active */
-.btn-navy,
-.btn-navy:hover,
-.btn-navy:focus,
-.btn-navy:active {
-  background: var(--navy) !important;
-  border-color: var(--navy) !important;
-  color: #fff !important;
-  opacity: 1 !important;
-  filter: none !important;
-}
+
+
 
 /* In case something is overlaying the button */
 form button.btn-navy {
@@ -197,8 +183,8 @@ form button.btn-navy {
   border: 1px solid rgba(0,0,0,0.12);
 
   box-shadow: 0 2px 6px rgba(0,0,0,0.15);
-padding: 3px 6px;
-height: 58px;
+padding: 3px;
+
 
 }
 
