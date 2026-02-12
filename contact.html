@@ -46,18 +46,13 @@
     <div class="small-muted">For service inquiries, operational support, or quote requests, please contact us below.</div>
   </div>
 </header>
+
+<!-- SUCCESS MESSAGE (shown after redirect) -->
 <div class="container mt-3" id="sentMessage" style="display:none;">
   <div class="alert alert-success mb-0">
-    Thank you—your message has been sent. We will respond promptly.
+    Thank you — your message has been sent. We will respond promptly.
   </div>
 </div>
-
-<script>
-  const params = new URLSearchParams(window.location.search);
-  if (params.get("sent") === "1") {
-    document.getElementById("sentMessage").style.display = "block";
-  }
-</script>
 
 <!-- CONTACT SECTION -->
 <section class="section">
@@ -70,8 +65,10 @@
           <h2 class="h5 fw-semibold">Contact form</h2>
           <p class="small-muted">Submit your message and we will respond promptly.</p>
 
-          <!-- Replace xxxxx with your Formspree ID -->
           <form action="https://formspree.io/f/mwvnvdvo" method="POST">
+            <!-- Redirect back to this page with a success flag -->
+            <input type="hidden" name="_redirect" value="contact.html?sent=1">
+
             <div class="row g-3">
               <div class="col-md-6">
                 <label class="form-label">Full Name</label>
@@ -88,9 +85,10 @@
                 <textarea class="form-control" name="message" rows="6" required></textarea>
               </div>
 
+              <!-- spam trap -->
               <input type="text" name="_gotcha" style="display:none">
+
               <input type="hidden" name="_subject" value="New Contact Message - ADDIS Repair & Services">
-               <input type="hidden" name="_redirect" value="https://bekalt.github.io/addis-repair-services/contact.html?sent=1">
 
               <div class="col-12 d-flex gap-2">
                 <button class="btn btn-navy" type="submit">Send Message</button>
@@ -98,6 +96,7 @@
               </div>
             </div>
           </form>
+
         </div>
       </div>
 
@@ -156,7 +155,21 @@
 
 <script>
   document.getElementById("year").textContent = new Date().getFullYear();
+
+  // Show success message + reset the form after redirect
+  const params = new URLSearchParams(window.location.search);
+  if (params.get("sent") === "1") {
+    const msg = document.getElementById("sentMessage");
+    if (msg) msg.style.display = "block";
+
+    const form = document.querySelector("form");
+    if (form) form.reset();
+
+    // Clean the URL so refresh doesn't keep showing the message
+    history.replaceState({}, "", "contact.html");
+  }
 </script>
+
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
 </body>
