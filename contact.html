@@ -46,6 +46,18 @@
     <div class="small-muted">For service inquiries, operational support, or quote requests, please contact us below.</div>
   </div>
 </header>
+<div class="container mt-3" id="sentMessage" style="display:none;">
+  <div class="alert alert-success mb-0">
+    Thank you—your message has been sent. We will respond promptly.
+  </div>
+</div>
+
+<script>
+  const params = new URLSearchParams(window.location.search);
+  if (params.get("sent") === "1") {
+    document.getElementById("sentMessage").style.display = "block";
+  }
+</script>
 
 <!-- CONTACT SECTION -->
 <section class="section">
@@ -59,7 +71,7 @@
           <p class="small-muted">Submit your message and we will respond promptly.</p>
 
           <!-- Replace xxxxx with your Formspree ID -->
-          <form action="https://formspree.io/f/xxxxx" method="POST">
+          <form action="https://formspree.io/f/mwvnvdvo" method="POST">
             <div class="row g-3">
               <div class="col-md-6">
                 <label class="form-label">Full Name</label>
@@ -78,6 +90,7 @@
 
               <input type="text" name="_gotcha" style="display:none">
               <input type="hidden" name="_subject" value="New Contact Message - ADDIS Repair & Services">
+               <input type="hidden" name="_redirect" value="https://bekalt.github.io/addis-repair-services/contact.html?sent=1">
 
               <div class="col-12 d-flex gap-2">
                 <button class="btn btn-navy" type="submit">Send Message</button>
