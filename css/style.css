@@ -181,19 +181,19 @@ form button.btn-navy {
   position: relative;
   z-index: 5;
 }
-/*
-.logo-img{
-  height: 46px;      
-  width: auto;
-  object-fit: contain;
-}
-*/
+/* Navbar logo visibility fix */
 .logo-img {
-  height: 48px;
+  height: 46px;
   width: auto;
-  border: 2px solid rgba(255,255,255,0.85);
+  display: block;
+
+  background: #ffffff;
+  padding: 6px 10px;
   border-radius: 10px;
-  box-shadow: 0 0 0 2px rgba(255,255,255,0.8),
-              0 4px 12px rgba(0,0,0,0.25);
-  
+  border: 1px solid rgba(0,0,0,0.12);
+
+  box-shadow: 0 2px 8px rgba(0,0,0,0.18);
+
+  opacity: 1;
+  filter: none;
 }
