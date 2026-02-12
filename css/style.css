@@ -197,3 +197,8 @@ form button.btn-navy {
   opacity: 1;
   filter: none;
 }
+/* Reduce left padding of navbar container */
+.navbar .container {
+  padding-left: 12px;   /* default is ~24px */
+  padding-right: 12px;
+}
