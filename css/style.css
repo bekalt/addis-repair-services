@@ -173,7 +173,8 @@ body{
 @media (max-width:991.98px){
 
   .navbar-brand{
-    margin-left:0;
+    margin-left:5px;
+    flex-shrink:0;
   }
 
   .navbar .navbar-collapse{
@@ -187,6 +188,7 @@ body{
   .navbar-nav{
     padding:6px 10px;
     border-radius:12px;
+    margin-left:20px;
     background:rgba(255,255,255,0.06);
     backdrop-filter:blur(6px);
     border:1px solid rgba(255,255,255,0.12);
