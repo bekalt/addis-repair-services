@@ -392,3 +392,36 @@ body{
   }
 
 }
+/* =========================
+   Services Card Upgrade
+========================= */
+
+.service-block{
+  padding:3rem 0;
+}
+
+.service-block .container{
+  background:#ffffff;
+  padding:32px;
+  border-radius:14px;
+  box-shadow:0 6px 20px rgba(0,0,0,0.06);
+}
+
+/* alternate background sections */
+.service-block.bg-light .container{
+  background:#f8fafc;
+  box-shadow:none;
+}
+
+/* tighten text area */
+.service-copy{
+  max-width:520px;
+}
+
+/* improve media spacing */
+.service-block .row.g-3{
+  margin-top:6px;
+}
+.service-block + .service-block{
+  border-top:1px solid #e9edf3;
+}
