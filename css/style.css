@@ -423,3 +423,36 @@ margin-left: 5px;
 .service-block + .service-block{
   border-top:1px solid #e9edf3;
 }
+
+/* =========================
+   Mobile Image Fix
+========================= */
+
+@media (max-width: 576px){
+
+  /* homepage service images */
+  .service-tile{
+    min-height:160px;
+  }
+
+  .service-tile .bg{
+    height:160px;
+  }
+
+  /* general images */
+  img{
+    max-width:100%;
+    height:auto;
+  }
+
+  /* homepage hero section */
+  .hero-media{
+    min-height:55vh;
+  }
+
+  /* reduce hero text padding */
+  .hero-text-card{
+    padding:10px 14px;
+  }
+
+}
