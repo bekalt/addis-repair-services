@@ -1,0 +1,5 @@
+﻿{
+  "Description": "Domain ownership verification file for Microsoft 365 - place in the website root",
+  "Domain": "addisrepairservices.com",
+  "Id": "45f7eff8-b8d9-4229-a1fc-5f5814b68c02"
+}
