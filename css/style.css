@@ -14,10 +14,6 @@ body{
   color:#111827;
 }
 
-/* =========================
-   Colors
-========================= */
-
 .bg-navy{
   background:var(--navy) !important;
 }
@@ -26,10 +22,7 @@ body{
   color:var(--navy) !important;
 }
 
-/* =========================
-   Buttons
-========================= */
-
+/* Buttons */
 .btn{
   border-radius:.75rem;
   padding:.75rem 1rem;
@@ -73,10 +66,7 @@ body{
   transform:translateY(-1px);
 }
 
-/* =========================
-   Typography
-========================= */
-
+/* Typography */
 .hero .lead{
   color:rgba(255,255,255,0.88);
 }
@@ -92,20 +82,14 @@ body{
   color:rgba(17,24,39,0.65);
 }
 
-/* =========================
-   Header
-========================= */
-
+/* Header */
 .page-header{
   background:var(--light);
   border-bottom:1px solid var(--border);
   padding:2.5rem 0;
 }
 
-/* =========================
-   Navbar
-========================= */
-
+/* Navbar */
 .navbar .container{
   max-width:1280px;
   padding-left:12px;
@@ -190,10 +174,7 @@ body{
   }
 }
 
-/* =========================
-   Forms
-========================= */
-
+/* Forms */
 .form-control,
 .form-select{
   border-radius:.75rem;
@@ -201,10 +182,7 @@ body{
   padding:.8rem 1rem;
 }
 
-/* =========================
-   Footer
-========================= */
-
+/* Footer */
 .footer{
   background:#0a1730;
   color:rgba(255,255,255,0.82);
@@ -220,10 +198,7 @@ body{
   text-decoration:underline;
 }
 
-/* =========================
-   Hero Section
-========================= */
-
+/* Hero Section */
 .hero-media{
   position:relative;
   min-height:62vh;
@@ -291,16 +266,15 @@ body{
   text-align:center;
 }
 
-/* =========================
-   Homepage Service Tiles
-========================= */
-
+/* Homepage Service Tiles */
 .service-tile{
   position:relative;
+  width:100%;
+  height:100%;
+  min-height:220px;
   border-radius:1rem;
   overflow:hidden;
   border:1px solid var(--border);
-  min-height:200px;
   background:#111;
   color:#fff;
 }
@@ -311,8 +285,10 @@ body{
   width:100%;
   height:100%;
   object-fit:cover;
+  object-position:center;
+  display:block;
   transform:scale(1.02);
-  filter:saturate(1.25) contrast(1.08) brightness(0.95);
+  filter:saturate(1.15) contrast(1.05) brightness(0.95);
   transition:transform 250ms ease;
 }
 
@@ -332,10 +308,16 @@ body{
   transform:scale(1.06);
 }
 
-/* =========================
-   Services Page
-========================= */
+/* Makes all homepage service cards align evenly */
+.section .row.g-3 > .col-lg-6{
+  display:flex;
+}
 
+.section .row.g-3 > .col-lg-6 .service-tile{
+  flex:1;
+}
+
+/* Services Page */
 .service-block{
   padding:3rem 0;
 }
@@ -391,10 +373,7 @@ body{
   display:block;
 }
 
-/* =========================
-   Mobile adjustments
-========================= */
-
+/* Mobile adjustments */
 @media (max-width:576px){
   .hero{
     padding:4.5rem 0;
@@ -441,7 +420,7 @@ body{
   }
 
   .service-tile{
-    min-height:140px;
+    min-height:145px;
   }
 
   .service-tile .inner{
@@ -462,7 +441,7 @@ body{
 
 @media (min-width:577px) and (max-width:768px){
   .service-tile{
-    min-height:160px;
+    min-height:165px;
   }
 
   .service-tile .inner{
@@ -479,30 +458,4 @@ body{
     font-size:0.88rem;
     margin-bottom:6px;
   }
-  /* Fix Services at a Glance image alignment and clarity */
-.service-tile{
-  min-height: 220px;
-}
-
-.service-tile .bg{
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: center;
-  display: block;
-}
-/* Fix homepage Services at a Glance card alignment */
-.service-tile {
-  width: 100%;
-  height: 100%;
-  min-height: 200px;
-}
-
-.service-tile .bg {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: center;
-  display: block;
-}
 }
